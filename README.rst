@@ -10,13 +10,25 @@ Generates Geometry-Aware word meta embeddings as per `this <https://arxiv.org/ab
 Requirements
 ============
 
-- Same as `GeoMM`
+Install the `requirements.txt` into your python env
+
+.. code-block:: bash
+
+   $ python3 -m venv env
+   $ source env/bin/activate
+   $ pip install -r requirements.txt
 
 =====
 Usage
 =====
 
-Assuming that the necessary PYTHON environment is already present.
+Assuming that the necessary PYTHON environment is already present (by `source env/bin/activate`).
+
+- The zip folder contains `./libs`. This needs to be used to include `pymanopt`
+
+  .. code-block:: bash
+
+     $ PYTHONPATH="$PYTHONPATH":./libs/ # Either export this environemnt/prepend this with the `python` cmds which are being executed.
 
 - To generate latent space embeddings using the Geometry framework, run the following cmd
 
@@ -37,6 +49,8 @@ Assuming that the necessary PYTHON environment is already present.
 **NOTE**
 
 - The dictionary should be built as per the method specified in the paper which results in an identity matrix
+- The `requirements.txt` is the minimal version needed to execute the cmds. For example, if `pymanopt` is installed via `pip`, it downloads `torch`
+  to do efficient computations.
 
 Sample
 ======
