@@ -1,16 +1,34 @@
-========
-Overview
+=====================================
+Geometric Word Meta Embeddings (GWME)
+=====================================
+
+Generates Geometry-Aware word meta embeddings as discussed in:
+
+Pratik Jawanpuria, N T V Satya Dev, Anoop Kunchukuttan, and Bamdev Mishra. `Learning geometric word
+meta-embeddings <https://www.aclweb.org/anthology/2020.repl4nlp-1.6/>`_. In Proceedings of the 5th Workshop on Representation Learning for NLP, pages 39–44,
+July 2020. Association for Computational Linguistics.
+
+
+
+Abstract
 ========
 
-Generates Geometry-Aware word meta embeddings as per `this <https://arxiv.org/abs/2004.09219>`_ work
-
-- The base implementation for Geometry related framework is picked from `here <https://github.com/anoopkunchukuttan/geomm>`_ (GeoMM) which has a similar setting as cited in above paper.
+We propose a geometric framework for learning meta-embeddings of words from different embedding sources. Our framework transforms the embeddings into a common latent
+space, where, for example, simple averaging
+or concatenation of different embeddings (of
+a given word) is more amenable. The proposed latent space arises from two particular
+geometric transformations - source embedding
+specific orthogonal rotations and a common
+Mahalanobis metric scaling. Empirical results
+on several word similarity and word analogy
+benchmarks illustrate the efficacy of the proposed framework
 
 ============
 Requirements
 ============
 
-- Same as `GeoMM`
+The implementation of proposed Geometry framework is taken from `here <https://github.com/anoopkunchukuttan/geomm>`_ (GeoMM).
+Checkout the GeoMM repo for installation of dependencies.
 
 =====
 Usage
